@@ -8,14 +8,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
-
-import { register } from 'register-service-worker'
-
-register(`/service-worker.js`, {
-  ready() {
-    console.log('App is being served from cache by a service worker.')
-  },
-  registered() {
-    console.log('Service worker has been registered.')
-  },
-})
